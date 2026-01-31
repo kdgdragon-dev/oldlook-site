@@ -90,7 +90,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Hero: Responsive Background (Full Map View) */
+        /* Hero: Responsive Background */
         .hero-vessel {
             position: relative;
             min-height: 100vh;
@@ -155,7 +155,6 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
         <div class="flex items-center gap-4">
-            <!-- 로고 박스 하얀색 고정 -->
             <div id="logo-box" class="w-12 h-12 md:w-16 md:h-16 bg-white flex items-center justify-center shadow-xl rounded-full overflow-hidden border-2 border-slate-100 transition-all duration-300">
                 <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Logo" class="w-full h-full object-contain p-0">
             </div>
@@ -312,28 +311,29 @@
                         <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/parka.jpg">
                         <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Premium</h5></div>
                     </div>
-                    <!-- [MODIFIED] 03 Women Dresses: 사장님 요청 주소 반영 -->
                     <div class="cat-card reveal shadow-md">
                         <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/dress.png">
                         <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Women Dresses</h5></div>
                     </div>
+                    <!-- [MODIFIED] 04 Kids Summer: 올바른 Raw 주소 적용 -->
                     <div class="cat-card reveal shadow-md">
-                        <img src="https://raw.github.com/kdgdragon-dev/oldlook-site/blob/main/Gemini_Generated_Image_lvxh38lvxh38lvxh.png">
+                        <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_lvxh38lvxh38lvxh.png">
                         <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Kids Summer</h5></div>
                     </div>
                     <div class="cat-card reveal shadow-md">
                         <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800">
                         <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Knit</h5></div>
                     </div>
+                    <!-- [MODIFIED] 06 Dolls & Toys: 올바른 Raw 주소 적용 -->
                     <div class="cat-card reveal shadow-md">
-                        <img src="https://raw.github.com/kdgdragon-dev/oldlook-site/blob/main/toys.jpg">
+                        <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/toys.jpg">
                         <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Dolls & Toys</h5></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section (Fixed 404 & Netlify Integration) -->
+        <!-- Contact Section -->
         <section id="contact" class="py-32 px-6 bg-white border-t border-slate-100">
             <div class="container mx-auto grid lg:grid-cols-2 gap-28">
                 <div class="reveal">
@@ -425,7 +425,6 @@
             document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option value="${v}">${v}</option>`).join('');
             document.getElementById('input-email').placeholder = data.emailPlace;
             document.getElementById('input-req').placeholder = data.reqPlace;
-            // Update Addresses
             document.getElementById('addr-01').textContent = data.addr01;
             document.getElementById('addr-02').textContent = data.addr02;
         }
@@ -451,10 +450,8 @@
             if (window.scrollY > 50) {
                 nav.classList.add('nav-scrolled', 'py-4');
                 nav.classList.remove('py-6');
-                
                 logoBox.style.backgroundColor = '#FFFFFF'; 
                 logoBox.style.color = '#0F172A';
-                
                 logoText.style.color = '#0F172A';
                 logoSubs.forEach(el => el.style.color = '#64748b');
                 navLinks.forEach(el => el.style.color = '#475569');
@@ -471,10 +468,8 @@
             } else {
                 nav.classList.remove('nav-scrolled', 'py-4');
                 nav.classList.add('py-6');
-                
                 logoBox.style.backgroundColor = '#FFFFFF';
                 logoBox.style.color = '#000000';
-                
                 logoText.style.color = '#FFFFFF';
                 logoSubs.forEach(el => el.style.color = 'rgba(255,255,255,0.5)');
                 navLinks.forEach(el => el.style.color = '#FFFFFF');
