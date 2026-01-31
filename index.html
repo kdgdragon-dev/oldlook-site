@@ -9,7 +9,7 @@
     <meta name="description" content="OLDLOOK CORPORATION: Premium Korea used clothing exporter. We offer fashion-curated textiles through a master 3-stage manual inspection. Only 2-3 containers per month for absolute quality.">
     <meta name="keywords" content="Korea used clothing export, premium second hand fashion, 3-stage sorting clothes, Gangnam used clothes export, luxury used clothing wholesale, OLDLOOK CORPORATION">
     <meta name="author" content="OLDLOOK CORPORATION">
-    <link rel="canonical" href="https://your-domain.com/">
+    <link rel="canonical" href="https://koreausedclothing.com/">
 
     <!-- [SEO] Structured Data for AI & Search Engines -->
     <script type="application/ld+json">
@@ -18,7 +18,7 @@
       "@type": "WholesaleStore",
       "name": "OLDLOOK CORPORATION",
       "description": "Premium Korean used clothing export leader. Specialized in professional curation of fashionable items with a 3-stage master inspection.",
-      "url": "https://your-domain.com/",
+      "url": "https://koreausedclothing.com/",
       "address": {
         "@type": "PostalAddress",
         "streetAddress": "164, Jeonjimimal-gil, Jori-eup",
@@ -83,12 +83,13 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Hero: Fixed Alignment */
+        /* Hero: Fixed Background with Raw Image URL */
         .hero-vessel {
             position: relative;
             min-height: 100vh;
             width: 100vw;
-            background-image: linear-gradient(rgba(15, 23, 42, 0.5), rgba(15, 23, 42, 0.7)), url('Gemini_Generated_Image_vzqqv9vzqqv9vzqq.jpg');
+            /* 원본 이미지 주소로 수정하여 배경이 확실히 나오게 함 */
+            background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5)), url('https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_vzqqv9vzqqv9vzqq.png');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -145,9 +146,9 @@
 </head>
 <body class="lang-ko">
 
-    <!-- Navigation -->
-    <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex justify-between items-center transition-all duration-500">
-        <div class="flex items-center gap-4">
+    <!-- Navigation (Mobile Optimized) -->
+    <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
+        <div class="flex items-center gap-4 mb-4 md:mb-0">
             <div id="logo-box" class="w-10 h-10 md:w-12 md:h-12 bg-white text-black flex items-center justify-center font-bold text-xl md:text-2xl shadow-xl rounded-sm">O</div>
             <div class="flex flex-col">
                 <span id="logo-text" class="text-white font-bold text-base md:text-lg tracking-tight">OLDLOOK</span>
@@ -159,7 +160,7 @@
             </div>
         </div>
 
-        <div class="flex items-center gap-4 md:gap-10">
+        <div class="flex items-center gap-4 md:gap-10 w-full md:w-auto">
             <div class="hidden lg:flex items-center gap-10 text-white" id="nav-links">
                 <a href="#process" class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">
                     <span data-lang="en">Process</span><span data-lang="ko">수출공정</span><span data-lang="es">Proceso</span>
@@ -209,7 +210,7 @@
     <!-- [MAIN] -->
     <main class="bg-white rounded-t-[3rem] relative z-20 -mt-20 shadow-2xl overflow-hidden">
         
-        <!-- [PHILOSOPHY] Professional Commitment -->
+        <!-- Philosophy Section -->
         <section class="py-24 px-6 bg-slate-950 text-white border-b border-white/5">
             <div class="container mx-auto max-w-5xl text-center reveal">
                 <div class="inline-flex items-center gap-3 px-6 py-2 border border-blue-500/30 rounded-full mb-10 bg-blue-500/5">
@@ -246,9 +247,7 @@
                         <span data-lang="en">01. Elite Sourcing</span><span data-lang="ko">01. 엘리트 수거</span><span data-lang="es">01. Sourcing Elite</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="en">We source exclusively from Seoul's high-income residential zones, ensuring a naturally high ratio of premium brands.</span>
                         <span data-lang="ko">서울의 주요 고소득 주거 단지에서만 원물을 확보하여, 자연스럽게 높은 브랜드 비중과 기초 품질을 보장합니다.</span>
-                        <span data-lang="es">Obtenemos exclusivamente de zonas residenciales de altos ingresos de Seúl.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -257,9 +256,7 @@
                         <span data-lang="en">02. 3-Stage Audit</span><span data-lang="ko">02. 3단계 마스터 검수</span><span data-lang="es">02. Auditoría Maestra</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="en">A meticulous process: 1st removal of defects, 2nd category sorting, and 3rd final trend/quality judgment by masters.</span>
-                        <span data-lang="ko">1차 오염물 제거, 2차 세부 카테고리 분류, 3차 마스터의 최종 트렌드 및 품질 판정으로 무결점 상품을 선별합니다.</span>
-                        <span data-lang="es">Un proceso meticuloso: 1ª eliminación de defectos, 2ª clasificación y 3ª evaluación final.</span>
+                        <span data-lang="ko">1차 오염물 제거, 2차 세부 분류, 3차 마스터의 판정으로 무결점 상품을 선별합니다.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -268,9 +265,7 @@
                         <span data-lang="en">03. Gentle Baling</span><span data-lang="ko">03. 정밀 압축 포장</span><span data-lang="es">03. Empacado Suave</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="en">Using precision hydraulic technology to pack 45kg-100kg bales without damaging the fabric fibers.</span>
-                        <span data-lang="ko">의류 섬유의 손상을 최소화하는 유압 기술을 사용하여, 상품성을 완벽히 보존한 채 고밀도로 압축 포장합니다.</span>
-                        <span data-lang="es">Uso de tecnología hidráulica de precisión para empacar sin dañar las fibras.</span>
+                        <span data-lang="ko">유압 기술을 사용하여 섬유 손상 없이 고밀도로 압축 포장합니다.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -279,50 +274,44 @@
                         <span data-lang="en">04. Global Loading</span><span data-lang="ko">04. 글로벌 선적</span><span data-lang="es">04. Envío Global</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="en">Optimized logistics delivering our limited-edition containers daily to major ports across three continents.</span>
-                        <span data-lang="ko">최적화된 물류 시스템을 통해 엄선된 한정 수량 컨테이너를 아프리카, 미주, 아시아 전역으로 선적합니다.</span>
-                        <span data-lang="es">Logística optimizada que entrega nuestros contenedores a los principales puertos.</span>
+                        <span data-lang="ko">최적화된 물류 시스템을 통해 엄선된 컨테이너를 전 세계로 선적합니다.</span>
                     </p>
                 </div>
             </div>
         </section>
 
-        <!-- [COLLECTION] -->
+        <!-- Collection Section -->
         <section id="collection" class="py-32 bg-slate-50 px-6">
             <div class="container mx-auto">
                 <div class="flex flex-col md:flex-row justify-between items-end mb-24 reveal">
-                    <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase">
-                        <span data-lang="en">Signature<br>Inventory</span><span data-lang="ko">핵심<br>취급 품목</span><span data-lang="es">Colección<br>Core</span>
-                    </h2>
-                    <p class="text-[11px] uppercase font-black tracking-[0.4em] text-blue-600 mt-8 md:mt-0">Fashion Curated</p>
+                    <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase">Signature Inventory</h2>
                 </div>
-                
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Summer Wear</span><span data-lang="ko">여름 의류</span><span data-lang="es">Ropa de Verano</span></h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Winter Premium</span><span data-lang="ko">겨울 의류</span><span data-lang="es">Invierno Premium</span></h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1518917232260-0e613b775518?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Women Dresses</span><span data-lang="ko">여성 드레스</span><span data-lang="es">Vestidos</span></h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1519270830450-65365866e13b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Kids Wear</span><span data-lang="ko">아동 의류</span><span data-lang="es">Ropa Infantil</span></h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Winter Knit</span><span data-lang="ko">겨울 니트</span><span data-lang="es">Tejidos</span></h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1555448248-2571daf6344b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase"><span data-lang="en">Dolls & Toys</span><span data-lang="ko">인형 및 완구</span><span data-lang="es">Juguetes</span></h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Summer Wear</h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Premium</h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1518917232260-0e613b775518?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Women Dresses</h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1519270830450-65365866e13b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Kids Wear</h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Knit</h5></div></div>
+                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1555448248-2571daf6344b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Dolls & Toys</h5></div></div>
                 </div>
             </div>
         </section>
 
-        <!-- [CONTACT] -->
+        <!-- Contact Section -->
         <section id="contact" class="py-32 px-6 bg-white border-t border-slate-100">
             <div class="container mx-auto grid lg:grid-cols-2 gap-28">
                 <div class="reveal">
                     <h3 class="text-5xl font-serif font-bold mb-20 uppercase tracking-tighter text-slate-900">Logistics Center</h3>
                     <div class="space-y-20">
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[10px] uppercase mb-4 tracking-widest">Warehouse 01</h5>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 01</h5>
                             <p class="text-2xl font-bold mb-2 text-slate-900">Paju Center One</p>
-                            <p class="text-slate-400 font-medium" id="addr-01"></p>
+                            <p class="text-slate-400 font-medium text-lg" id="addr-01"></p>
                         </div>
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[10px] uppercase mb-4 tracking-widest">Warehouse 02</h5>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 02</h5>
                             <p class="text-2xl font-bold mb-2 text-slate-900">Export Hub</p>
-                            <p class="text-slate-400 font-medium" id="addr-02"></p>
+                            <p class="text-slate-400 font-medium text-lg" id="addr-02"></p>
                         </div>
                         <div class="p-14 bg-slate-900 text-white rounded-3xl mt-16 border-l-8 border-blue-600">
                             <p class="text-[11px] font-black uppercase opacity-40 mb-8">Official Inquiry</p>
@@ -332,35 +321,33 @@
                 </div>
 
                 <div class="reveal p-12 md:p-16 bg-slate-50 rounded-[3rem] border border-slate-200 shadow-xl">
-                    <h4 class="text-3xl font-display font-black mb-16 uppercase tracking-tighter text-slate-900">
-                        <span data-lang="en">Order Inquiry</span><span data-lang="ko">수출 견적 요청</span><span data-lang="es">Consulta de Pedido</span>
+                    <h4 class="text-3xl font-display font-black mb-16 uppercase tracking-tighter text-slate-900 text-center">
+                        <span data-lang="en">Order Inquiry</span><span data-lang="ko">수출 견적 요청</span><span data-lang="es">Consulta</span>
                     </h4>
                     
-                    <!-- [FIXED] Netlify Form: Added action and ensured correct attributes to prevent 404 -->
-                    <form name="contact" method="POST" data-netlify="true" class="space-y-10" action="/?success=true">
-                        <!-- Netlify Identity Field -->
+                    <form name="contact" method="POST" data-netlify="true" action="/?success=true" class="space-y-10">
                         <input type="hidden" name="form-name" value="contact" />
                         
                         <div class="grid md:grid-cols-2 gap-10">
                             <div class="space-y-4">
-                                <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Region</span><span data-lang="ko">도착 지역</span><span data-lang="es">Región</span></label>
-                                <select name="destination" id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
+                                <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest">Region</label>
+                                <select name="destination_region" id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
                             </div>
                             <div class="space-y-4">
-                                <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Volume</span><span data-lang="ko">필요 수량</span><span data-lang="es">Volumen</span></label>
-                                <select name="volume" id="input-volume" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
+                                <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest">Volume</label>
+                                <select name="order_volume" id="input-volume" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
                             </div>
                         </div>
                         <div class="space-y-4">
-                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Business Email</span><span data-lang="ko">비즈니스 이메일</span><span data-lang="es">Email</span></label>
+                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest">Business Email</label>
                             <input name="email" id="input-email" type="email" required class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold">
                         </div>
                         <div class="space-y-4">
-                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Requirements</span><span data-lang="ko">상세 요청사항</span><span data-lang="es">Requerimientos</span></label>
+                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest">Requirements</label>
                             <textarea name="message" id="input-req" rows="4" class="w-full bg-white/50 border-2 border-slate-100 rounded-2xl p-6 outline-none focus:border-blue-600 text-sm font-bold resize-none transition-all"></textarea>
                         </div>
                         <button type="submit" class="w-full py-7 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] hover:bg-blue-700 rounded-2xl shadow-xl transition-all">
-                            <span data-lang="en">Submit Protocol</span><span data-lang="ko">문의 접수하기</span><span data-lang="es">Enviar Protocolo</span>
+                            Submit Inquiry
                         </button>
                     </form>
                 </div>
@@ -368,15 +355,11 @@
         </section>
     </main>
 
-    <!-- [FOOTER] SEO Optimization -->
+    <!-- Footer -->
     <footer class="py-24 bg-white text-center border-t border-slate-100">
         <div class="container mx-auto px-6 text-center">
             <p class="font-serif font-bold text-slate-900 text-5xl mb-6 tracking-tighter uppercase">OLDLOOK CORPORATION</p>
-            <p class="text-[11px] uppercase tracking-[0.4em] text-slate-400 font-black">
-                <span data-lang="en">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</span>
-                <span data-lang="ko">대한민국 헌옷 수출 글로벌 리더 | 사업자 번호: 124-45-61361</span>
-                <span data-lang="es">Líder Global en Ropa Usada de Corea | Reg No: 124-45-61361</span>
-            </p>
+            <p class="text-[11px] uppercase tracking-[0.4em] text-slate-400 font-black">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</p>
         </div>
     </footer>
 
@@ -384,30 +367,9 @@
         lucide.createIcons();
 
         const dictionary = {
-            ko: { 
-                regions: ['도착 지역 선택', '아프리카', '아메리카', '아시아 퍼시픽'], 
-                volumes: ['컨테이너 크기', '20피트 Standard', '40피트 High Cube', '샘플 주문'], 
-                emailPlace: '이메일 주소를 입력하세요', 
-                reqPlace: '품목이나 등급 등 상세 내용을 적어주세요.',
-                addr01: '경기도 파주시 조리읍 전지미말길 164',
-                addr02: '경기도 파주시 교하동 빙고재길 48-20'
-            },
-            en: { 
-                regions: ['Select Destination', 'Africa', 'Americas', 'Asia Pacific'], 
-                volumes: ['Container Size', '20ft Standard', '40ft High Cube', 'Sample Trial'], 
-                emailPlace: 'Enter business email', 
-                reqPlace: 'Items, grades or special requirements...',
-                addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Korea',
-                addr02: '48-20, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Korea'
-            },
-            es: { 
-                regions: ['Seleccionar Región', 'África', 'América', 'Asia Pacífico'], 
-                volumes: ['Tamaño del Contenedor', '20 pies Standard', '40 pies High Cube', 'Pedido de Muestra'], 
-                emailPlace: 'Ingrese su correo electrónico', 
-                reqPlace: 'Detalles como artículos, grados...',
-                addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Corea del Sur',
-                addr02: '48-20, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Corea del Sur'
-            }
+            ko: { regions: ['도착 지역 선택', '아프리카', '아메리카', '아시아 퍼시픽'], volumes: ['컨테이너 크기', '20피트 Standard', '40피트 High Cube', '샘플 주문'], emailPlace: '이메일 주소를 입력하세요', reqPlace: '품목이나 등급 등 상세 내용을 적어주세요.', addr01: '경기도 파주시 조리읍 전지미말길 164', addr02: '경기도 파주시 교하동 빙고재길 48-20' },
+            en: { regions: ['Select Destination', 'Africa', 'Americas', 'Asia Pacific'], volumes: ['Container Size', '20ft Standard', '40ft High Cube', 'Sample Trial'], emailPlace: 'Enter business email', reqPlace: 'Items, grades or special requirements...', addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Korea', addr02: '48-20, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Korea' },
+            es: { regions: ['Seleccionar Región', 'África', 'América', 'Asia Pacífico'], volumes: ['Tamaño del Contenedor', '20 pies Standard', '40 pies High Cube', 'Pedido de Muestra'], emailPlace: 'Ingrese su correo electrónico', reqPlace: 'Detalles como artículos, grados...', addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Corea del Sur', addr02: '48-20, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Corea del Sur' }
         };
 
         function setLang(lang) {
@@ -425,22 +387,18 @@
             document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option value="${v}">${v}</option>`).join('');
             document.getElementById('input-email').placeholder = data.emailPlace;
             document.getElementById('input-req').placeholder = data.reqPlace;
-            // Update Addresses
             document.getElementById('addr-01').textContent = data.addr01;
             document.getElementById('addr-02').textContent = data.addr02;
         }
 
         function reveal() {
-            const reveals = document.querySelectorAll(".reveal");
-            reveals.forEach(el => {
-                const elementTop = el.getBoundingClientRect().top;
-                if (elementTop < window.innerHeight - 100) el.classList.add("active");
+            document.querySelectorAll(".reveal").forEach(el => {
+                if (el.getBoundingClientRect().top < window.innerHeight - 100) el.classList.add("active");
             });
         }
 
         window.addEventListener('scroll', reveal);
         window.onload = () => { setLang('ko'); reveal(); };
-
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             const logoBox = document.getElementById('logo-box');
@@ -460,7 +418,7 @@
                 langBtns.forEach(btn => btn.style.color = '#0F172A');
             } else {
                 nav.classList.remove('nav-scrolled', 'py-4');
-                nav.classList.add('py-8');
+                nav.classList.add('py-6');
                 logoBox.style.backgroundColor = '#FFFFFF';
                 logoBox.style.color = '#000000';
                 logoText.style.color = '#FFFFFF';
