@@ -315,12 +315,12 @@
                     <h3 class="text-5xl font-serif font-bold mb-20 uppercase tracking-tighter text-slate-900">Logistics Center</h3>
                     <div class="space-y-20">
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 01</h5>
+                            <h5 class="text-blue-600 font-bold text-[10px] uppercase mb-4 tracking-widest">Warehouse 01</h5>
                             <p class="text-2xl font-bold mb-2 text-slate-900">Paju Center One</p>
                             <p class="text-slate-400 font-medium" id="addr-01"></p>
                         </div>
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 02</h5>
+                            <h5 class="text-blue-600 font-bold text-[10px] uppercase mb-4 tracking-widest">Warehouse 02</h5>
                             <p class="text-2xl font-bold mb-2 text-slate-900">Export Hub</p>
                             <p class="text-slate-400 font-medium" id="addr-02"></p>
                         </div>
@@ -336,15 +336,15 @@
                         <span data-lang="en">Order Inquiry</span><span data-lang="ko">수출 견적 요청</span><span data-lang="es">Consulta de Pedido</span>
                     </h4>
                     
-                    <!-- Netlify Form 적용: 데이터가 실제 이메일로 전달되도록 구조 변경 -->
-                    <form name="contact" method="POST" data-netlify="true" class="space-y-10">
-                        <!-- Netlify 연동을 위한 히든 필드 -->
+                    <!-- [FIXED] Netlify Form: Added action and ensured correct attributes to prevent 404 -->
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-10" action="/?success=true">
+                        <!-- Netlify Identity Field -->
                         <input type="hidden" name="form-name" value="contact" />
                         
                         <div class="grid md:grid-cols-2 gap-10">
                             <div class="space-y-4">
                                 <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Region</span><span data-lang="ko">도착 지역</span><span data-lang="es">Región</span></label>
-                                <select name="region" id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
+                                <select name="destination" id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
                             </div>
                             <div class="space-y-4">
                                 <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Volume</span><span data-lang="ko">필요 수량</span><span data-lang="es">Volumen</span></label>
