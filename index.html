@@ -90,7 +90,7 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Hero: Responsive Background */
+        /* Hero: Responsive Background (Full Map View) */
         .hero-vessel {
             position: relative;
             min-height: 100vh;
@@ -155,7 +155,10 @@
     <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
         <div class="flex items-center gap-4">
-            <div id="logo-box" class="w-10 h-10 md:w-12 md:h-12 bg-white text-black flex items-center justify-center font-bold text-xl md:text-2xl shadow-xl rounded-sm">O</div>
+            <!-- [MODIFIED] 로고 박스 크기 조절 및 상시 흰색 유지 -->
+            <div id="logo-box" class="w-12 h-12 md:w-16 md:h-16 bg-white flex items-center justify-center shadow-xl rounded-full overflow-hidden border-2 border-slate-100 transition-all duration-300">
+                <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Logo" class="w-full h-full object-contain p-0">
+            </div>
             <div class="flex flex-col">
                 <span id="logo-text" class="text-white font-bold text-base md:text-lg tracking-tight transition-colors">OLDLOOK</span>
                 <div id="logo-subs-container">
@@ -236,7 +239,7 @@
             </div>
         </section>
         
-        <!-- [PROCESS] Selection Standards with English & Spanish Descriptions -->
+        <!-- [PROCESS] Master Protocol Section (Descriptions for all languages) -->
         <section id="process" class="py-32 px-6">
             <div class="max-w-4xl mx-auto text-center mb-28 reveal">
                 <h3 class="text-[10px] font-black tracking-[0.6em] text-blue-600 uppercase mb-4">Selection Standards</h3>
@@ -254,8 +257,8 @@
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         <span data-lang="ko">서울의 주요 고소득 주거 단지에서만 원물을 확보하여, 자연스럽게 높은 브랜드 비중과 기초 품질을 보장합니다.</span>
-                        <span data-lang="en">Sourced exclusively from Seoul's high-income residential zones, ensuring high brand density and superior fabric condition.</span>
-                        <span data-lang="es">Obtenemos exclusivamente de zonas residenciales de altos ingresos de Seúl, garantizando una alta presencia de marcas.</span>
+                        <span data-lang="en">Sourced exclusively from Seoul's prime residential zones, ensuring high brand density and superior condition.</span>
+                        <span data-lang="es">Obtenemos exclusivamente de zonas residenciales de altos ingresos de Seúl, garantizando marcas premium.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -265,8 +268,8 @@
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         <span data-lang="ko">1차 오염물 제거, 2차 세부 분류, 3차 마스터의 판정으로 무결점 상품을 선별합니다.</span>
-                        <span data-lang="en">A meticulous 3-tier inspection process by veteran specialists to select only defect-free, premium items.</span>
-                        <span data-lang="es">Un proceso meticuloso de inspección de 3 niveles realizado por especialistas para seleccionar solo artículos premium.</span>
+                        <span data-lang="en">A meticulous 3-tier manual inspection by veteran specialists to select only defect-free, premium items.</span>
+                        <span data-lang="es">Un proceso de inspección manual de 3 etapas realizado por especialistas para seleccionar solo artículos premium.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -276,8 +279,8 @@
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed">
                         <span data-lang="ko">의류 섬유의 손상을 최소화하는 유압 기술을 사용하여, 상품성을 완벽히 보존한 채 고밀도로 압축 포장합니다.</span>
-                        <span data-lang="en">State-of-the-art hydraulic compression maintains garment integrity while maximizing container load efficiency.</span>
-                        <span data-lang="es">La compresión hidráulica de última generación mantiene la integridad de la prenda mientras maximiza la carga.</span>
+                        <span data-lang="en">State-of-the-art hydraulic compression maintains fabric integrity while maximizing shipping efficiency.</span>
+                        <span data-lang="es">La compresión hidráulica de última generación mantiene la integridad de la prenda sin dañar las fibras.</span>
                     </p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
@@ -288,7 +291,7 @@
                     <p class="text-slate-500 text-sm leading-relaxed">
                         <span data-lang="ko">최적화된 물류 시스템을 통해 엄선된 컨테이너를 전 세계 주요 항구로 선적합니다.</span>
                         <span data-lang="en">Seamless global logistics delivering our limited-edition containers daily to major international ports.</span>
-                        <span data-lang="es">Logística global fluida que entrega nuestros contenedores de edición limitada a los principales puertos.</span>
+                        <span data-lang="es">Logística global fluida que entrega nuestros contenedores de edición limitada a los principales puertos mundiales.</span>
                     </p>
                 </div>
             </div>
@@ -301,17 +304,35 @@
                     <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase">Signature Inventory</h2>
                 </div>
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Summer Wear</h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Premium</h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1518917232260-0e613b775518?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Women Dresses</h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1519270830450-65365866e13b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Kids Wear</h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Knit</h5></div></div>
-                    <div class="cat-card reveal shadow-md"><img src="https://images.unsplash.com/photo-1555448248-2571daf6344b?auto=format&fit=crop&w=800"><div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Dolls & Toys</h5></div></div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Summer Wear</h5></div>
+                    </div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1544923246-77307dd654ca?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Premium</h5></div>
+                    </div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1518917232260-0e613b775518?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Women Dresses</h5></div>
+                    </div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1519706342041-c522cf16cd23?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Kids Summer</h5></div>
+                    </div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Winter Knit</h5></div>
+                    </div>
+                    <div class="cat-card reveal shadow-md">
+                        <img src="https://images.unsplash.com/photo-1555448248-2571daf6344b?auto=format&fit=crop&w=800">
+                        <div class="cat-overlay"><h5 class="font-black text-2xl uppercase">Dolls & Toys</h5></div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
+        <!-- Contact Section (Netlify Form Integrated) -->
         <section id="contact" class="py-32 px-6 bg-white border-t border-slate-100">
             <div class="container mx-auto grid lg:grid-cols-2 gap-28">
                 <div class="reveal">
@@ -370,7 +391,10 @@
 
     <!-- Footer -->
     <footer class="py-24 bg-white text-center border-t border-slate-100">
-        <div class="container mx-auto px-6 text-center">
+        <div class="container mx-auto px-6 text-center flex flex-col items-center">
+            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-8 shadow-sm overflow-hidden border border-slate-100">
+                <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Footer Logo" class="w-full h-full object-contain p-0">
+            </div>
             <p class="font-serif font-bold text-slate-900 text-5xl mb-6 tracking-tighter uppercase">OLDLOOK CORPORATION</p>
             <p class="text-[11px] uppercase tracking-[0.4em] text-slate-400 font-black">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</p>
         </div>
@@ -400,7 +424,6 @@
             document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option value="${v}">${v}</option>`).join('');
             document.getElementById('input-email').placeholder = data.emailPlace;
             document.getElementById('input-req').placeholder = data.reqPlace;
-            // Update Addresses
             document.getElementById('addr-01').textContent = data.addr01;
             document.getElementById('addr-02').textContent = data.addr02;
         }
@@ -426,14 +449,16 @@
             if (window.scrollY > 50) {
                 nav.classList.add('nav-scrolled', 'py-4');
                 nav.classList.remove('py-6');
-                logoBox.style.backgroundColor = '#0F172A';
-                logoBox.style.color = '#FFFFFF';
+                
+                // 스크롤 시에도 로고 박스 배경 하얀색 고정
+                logoBox.style.backgroundColor = '#FFFFFF'; 
+                logoBox.style.color = '#0F172A';
+                
                 logoText.style.color = '#0F172A';
                 logoSubs.forEach(el => el.style.color = '#64748b');
                 navLinks.forEach(el => el.style.color = '#475569');
                 langBtns.forEach(btn => btn.style.color = '#0F172A');
                 
-                // 모바일에서 스크롤 시 언어 탭이 로고 뒤로 숨겨지는 효과
                 if (window.innerWidth < 768) {
                     langContainer.style.maxHeight = '0';
                     langContainer.style.opacity = '0';
@@ -441,19 +466,19 @@
                     langContainer.style.padding = '0';
                     langContainer.style.pointerEvents = 'none';
                     langContainer.style.transform = 'translateY(-20px)';
-                    nav.style.paddingBottom = '10px';
                 }
             } else {
                 nav.classList.remove('nav-scrolled', 'py-4');
                 nav.classList.add('py-6');
+                
                 logoBox.style.backgroundColor = '#FFFFFF';
                 logoBox.style.color = '#000000';
+                
                 logoText.style.color = '#FFFFFF';
                 logoSubs.forEach(el => el.style.color = 'rgba(255,255,255,0.5)');
                 navLinks.forEach(el => el.style.color = '#FFFFFF');
                 langBtns.forEach(btn => btn.style.color = '#FFFFFF');
 
-                // 모바일 상단 복귀 시 언어 탭 표시
                 if (window.innerWidth < 768) {
                     langContainer.style.maxHeight = '100px';
                     langContainer.style.opacity = '1';
@@ -461,7 +486,6 @@
                     langContainer.style.padding = '0.375rem';
                     langContainer.style.pointerEvents = 'auto';
                     langContainer.style.transform = 'translateY(0)';
-                    nav.style.paddingBottom = '1.5rem';
                 }
             }
         });
