@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     
     <!-- [SEO] Search Engine Optimization Tags -->
     <title>OLDLOOK CORPORATION | Premium Korea Used Clothing Export Leader</title>
@@ -43,12 +43,19 @@
             --text-dark: #0f172a;
         }
 
+        /* 흰색 여백 이슈 해결: 가로 넘침 방지 */
+        html, body {
+            max-width: 100%;
+            overflow-x: hidden;
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
         body {
             font-family: 'Inter', 'Noto Sans KR', sans-serif;
             background-color: #f8fafc;
             color: var(--text-dark);
-            overflow-x: hidden;
-            scroll-behavior: smooth;
         }
 
         .font-serif { font-family: 'Cinzel', serif; }
@@ -64,14 +71,14 @@
         body.lang-es div[data-lang="es"], body.lang-es p[data-lang="es"], body.lang-es h1[data-lang="es"], body.lang-es h2[data-lang="es"], body.lang-es h3[data-lang="es"], body.lang-es h4[data-lang="es"] { display: block; }
 
         /* Navigation */
-        #navbar { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+        #navbar { transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; }
         .nav-scrolled { background: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 50px rgba(0,0,0,0.1); border-bottom: 1px solid #f1f5f9; }
         
         /* Language Buttons */
         .lang-btn {
-            width: 70px; height: 48px;
+            width: 60px; height: 44px;
             display: flex; align-items: center; justify-content: center;
-            font-weight: 900; font-size: 13px;
+            font-weight: 900; font-size: 12px;
             transition: all 0.3s ease;
             border: 2px solid rgba(255,255,255,0.2);
             border-radius: 6px;
@@ -83,12 +90,13 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.2);
         }
 
-        /* Hero: Fixed Background with Raw Image URL */
+        /* Hero: Responsive Background & Image Adjustment */
         .hero-vessel {
             position: relative;
             min-height: 100vh;
-            width: 100vw;
-            /* 원본 이미지 주소로 수정하여 배경이 확실히 나오게 함 */
+            width: 100%;
+            background-color: var(--brand-navy);
+            /* 기본 데스크탑 배경 */
             background-image: linear-gradient(rgba(15, 23, 42, 0.4), rgba(15, 23, 42, 0.5)), url('https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_vzqqv9vzqqv9vzqq.png');
             background-size: cover;
             background-position: center;
@@ -96,6 +104,16 @@
             align-items: center;
             justify-content: center;
             padding-top: 80px;
+        }
+
+        /* 모바일에서 지도 그림을 작게 중앙에 배치 */
+        @media (max-width: 768px) {
+            .hero-vessel {
+                background-image: linear-gradient(rgba(15, 23, 42, 0.6), rgba(15, 23, 42, 0.7)), url('https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_vzqqv9vzqqv9vzqq.png');
+                background-size: 85% auto; /* 작게 배치 */
+                background-repeat: no-repeat;
+                background-position: center 35%; /* 중앙 상단쯤 위치 */
+            }
         }
 
         /* Category Card */
@@ -133,9 +151,8 @@
             color: white !important;
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
-            transition-delay: 0s !important; 
         }
-        .process-card:hover p, .process-card:hover span, .process-card:hover h4 { color: white !important; }
+        .process-card:hover * { color: white !important; }
         .process-card:hover i { color: #60a5fa !important; }
 
         .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
@@ -146,12 +163,12 @@
 </head>
 <body class="lang-ko">
 
-    <!-- Navigation (Mobile Optimized) -->
+    <!-- Navigation -->
     <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
         <div class="flex items-center gap-4 mb-4 md:mb-0">
             <div id="logo-box" class="w-10 h-10 md:w-12 md:h-12 bg-white text-black flex items-center justify-center font-bold text-xl md:text-2xl shadow-xl rounded-sm">O</div>
             <div class="flex flex-col">
-                <span id="logo-text" class="text-white font-bold text-base md:text-lg tracking-tight">OLDLOOK</span>
+                <span id="logo-text" class="text-white font-bold text-base md:text-lg tracking-tight transition-colors">OLDLOOK</span>
                 <div id="logo-subs-container">
                    <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="en">Global Trading</span>
                    <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="ko">글로벌 무역</span>
@@ -173,7 +190,8 @@
                 </a>
             </div>
             
-            <div class="flex gap-2 bg-black/10 p-1.5 rounded-xl border border-white/10 backdrop-blur-md">
+            <!-- Language buttons container: 스크롤 시 모바일에서 숨김 처리 대상 -->
+            <div id="lang-container" class="flex gap-2 bg-black/10 p-1.5 rounded-xl border border-white/10 backdrop-blur-md transition-all duration-300">
                 <button onclick="setLang('ko')" id="l-ko" class="lang-btn text-white">KR</button>
                 <button onclick="setLang('en')" id="l-en" class="lang-btn text-white">EN</button>
                 <button onclick="setLang('es')" id="l-es" class="lang-btn text-white">ES</button>
@@ -230,7 +248,7 @@
             </div>
         </section>
         
-        <!-- [PROCESS] Selection Standards -->
+        <!-- [PROCESS] -->
         <section id="process" class="py-32 px-6">
             <div class="max-w-4xl mx-auto text-center mb-28 reveal">
                 <h3 class="text-[10px] font-black tracking-[0.6em] text-blue-600 uppercase mb-4">Selection Standards</h3>
@@ -243,39 +261,23 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto">
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
                     <i data-lucide="map-pin" class="mb-10 w-10 h-10 text-blue-600"></i>
-                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">01. Elite Sourcing</span><span data-lang="ko">01. 엘리트 수거</span><span data-lang="es">01. Sourcing Elite</span>
-                    </h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="ko">서울의 주요 고소득 주거 단지에서만 원물을 확보하여, 자연스럽게 높은 브랜드 비중과 기초 품질을 보장합니다.</span>
-                    </p>
+                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">01. Elite Sourcing</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed"><span data-lang="ko">서울의 주요 고소득 주거 단지에서만 원물을 확보합니다.</span></p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
                     <i data-lucide="layers-3" class="mb-10 w-10 h-10 text-blue-600"></i>
-                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">02. 3-Stage Audit</span><span data-lang="ko">02. 3단계 마스터 검수</span><span data-lang="es">02. Auditoría Maestra</span>
-                    </h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="ko">1차 오염물 제거, 2차 세부 분류, 3차 마스터의 판정으로 무결점 상품을 선별합니다.</span>
-                    </p>
+                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">02. 3-Stage Audit</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed"><span data-lang="ko">마스터의 3단계 판정으로 무결점 상품을 선별합니다.</span></p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
                     <i data-lucide="package" class="mb-10 w-10 h-10 text-blue-600"></i>
-                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">03. Gentle Baling</span><span data-lang="ko">03. 정밀 압축 포장</span><span data-lang="es">03. Empacado Suave</span>
-                    </h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="ko">유압 기술을 사용하여 섬유 손상 없이 고밀도로 압축 포장합니다.</span>
-                    </p>
+                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">03. Gentle Baling</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed"><span data-lang="ko">유압 기술을 사용하여 섬유 손상 없이 압축 포장합니다.</span></p>
                 </div>
                 <div class="process-card p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all">
                     <i data-lucide="ship" class="mb-10 w-10 h-10 text-blue-600"></i>
-                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">04. Global Loading</span><span data-lang="ko">04. 글로벌 선적</span><span data-lang="es">04. Envío Global</span>
-                    </h4>
-                    <p class="text-slate-500 text-sm leading-relaxed">
-                        <span data-lang="ko">최적화된 물류 시스템을 통해 엄선된 컨테이너를 전 세계로 선적합니다.</span>
-                    </p>
+                    <h4 class="font-black uppercase tracking-widest text-xs mb-4">04. Global Loading</h4>
+                    <p class="text-slate-500 text-sm leading-relaxed"><span data-lang="ko">엄선된 컨테이너를 전 세계 주요 항구로 선적합니다.</span></p>
                 </div>
             </div>
         </section>
@@ -313,7 +315,7 @@
                             <p class="text-2xl font-bold mb-2 text-slate-900">Export Hub</p>
                             <p class="text-slate-400 font-medium text-lg" id="addr-02"></p>
                         </div>
-                        <div class="p-14 bg-slate-900 text-white rounded-3xl mt-16 border-l-8 border-blue-600">
+                        <div class="p-14 bg-slate-900 text-white rounded-3xl mt-16 border-l-8 border-blue-600 transition-transform hover:scale-[1.02]">
                             <p class="text-[11px] font-black uppercase opacity-40 mb-8">Official Inquiry</p>
                             <a href="mailto:oldlooktrade@naver.com" class="text-2xl md:text-3xl font-serif font-bold underline hover:text-blue-400 break-all transition-all">oldlooktrade@naver.com</a>
                         </div>
@@ -327,7 +329,6 @@
                     
                     <form name="contact" method="POST" data-netlify="true" action="/?success=true" class="space-y-10">
                         <input type="hidden" name="form-name" value="contact" />
-                        
                         <div class="grid md:grid-cols-2 gap-10">
                             <div class="space-y-4">
                                 <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest">Region</label>
@@ -399,6 +400,7 @@
 
         window.addEventListener('scroll', reveal);
         window.onload = () => { setLang('ko'); reveal(); };
+
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
             const logoBox = document.getElementById('logo-box');
@@ -406,6 +408,7 @@
             const logoSubs = document.querySelectorAll('.logo-sub');
             const navLinks = document.querySelectorAll('.nav-link');
             const langBtns = document.querySelectorAll('.lang-btn:not(.active)');
+            const langContainer = document.getElementById('lang-container');
 
             if (window.scrollY > 100) {
                 nav.classList.add('nav-scrolled', 'py-4');
@@ -416,6 +419,13 @@
                 logoSubs.forEach(el => el.style.color = '#64748b');
                 navLinks.forEach(el => el.style.color = '#475569');
                 langBtns.forEach(btn => btn.style.color = '#0F172A');
+                
+                // 모바일에서 스크롤 시 언어 버튼 숨기기
+                if (window.innerWidth < 768) {
+                    langContainer.style.opacity = '0';
+                    langContainer.style.pointerEvents = 'none';
+                    langContainer.style.transform = 'translateY(-10px)';
+                }
             } else {
                 nav.classList.remove('nav-scrolled', 'py-4');
                 nav.classList.add('py-6');
@@ -425,6 +435,11 @@
                 logoSubs.forEach(el => el.style.color = 'rgba(255,255,255,0.5)');
                 navLinks.forEach(el => el.style.color = '#FFFFFF');
                 langBtns.forEach(btn => btn.style.color = '#FFFFFF');
+
+                // 모바일에서 최상단으로 오면 다시 표시
+                langContainer.style.opacity = '1';
+                langContainer.style.pointerEvents = 'auto';
+                langContainer.style.transform = 'translateY(0)';
             }
         });
     </script>
