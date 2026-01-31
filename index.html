@@ -19,15 +19,13 @@
       "name": "OLDLOOK CORPORATION",
       "description": "Premium Korean used clothing export leader. Specialized in professional curation of fashionable items with a 3-stage master inspection.",
       "url": "https://your-domain.com/",
-      "address": [
-        {
-          "@type": "PostalAddress",
-          "streetAddress": "164, Jeonjimimal-gil, Jori-eup",
-          "addressLocality": "Paju-si",
-          "addressRegion": "Gyeonggi-do",
-          "addressCountry": "KR"
-        }
-      ],
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "164, Jeonjimimal-gil, Jori-eup",
+        "addressLocality": "Paju-si",
+        "addressRegion": "Gyeonggi-do",
+        "addressCountry": "KR"
+      },
       "email": "oldlooktrade@naver.com"
     }
     </script>
@@ -314,49 +312,54 @@
         <section id="contact" class="py-32 px-6 bg-white border-t border-slate-100">
             <div class="container mx-auto grid lg:grid-cols-2 gap-28">
                 <div class="reveal">
-                    <h3 class="text-5xl font-serif font-bold mb-20 uppercase tracking-tighter">Logistics Center</h3>
+                    <h3 class="text-5xl font-serif font-bold mb-20 uppercase tracking-tighter text-slate-900">Logistics Center</h3>
                     <div class="space-y-20">
                         <div>
-                            <h5 class="text-[11px] font-black uppercase tracking-[0.4em] text-blue-600 mb-4">Warehouse 01</h5>
-                            <p class="text-2xl font-bold text-slate-900 mb-2">Paju Center One</p>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 01</h5>
+                            <p class="text-2xl font-bold mb-2 text-slate-900">Paju Center One</p>
                             <p class="text-slate-400 font-medium" id="addr-01"></p>
                         </div>
                         <div>
-                            <h5 class="text-[11px] font-black uppercase tracking-[0.4em] text-blue-600 mb-4">Warehouse 02</h5>
-                            <p class="text-2xl font-bold text-slate-900 mb-2">Export Hub</p>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-4 tracking-widest">Warehouse 02</h5>
+                            <p class="text-2xl font-bold mb-2 text-slate-900">Export Hub</p>
                             <p class="text-slate-400 font-medium" id="addr-02"></p>
                         </div>
                         <div class="p-14 bg-slate-900 text-white rounded-3xl mt-16 border-l-8 border-blue-600">
                             <p class="text-[11px] font-black uppercase opacity-40 mb-8">Official Inquiry</p>
-                            <a href="mailto:oldlooktrade@naver.com" class="text-2xl md:text-3xl font-serif font-bold underline hover:text-blue-400 break-all">oldlooktrade@naver.com</a>
+                            <a href="mailto:oldlooktrade@naver.com" class="text-2xl md:text-3xl font-serif font-bold underline hover:text-blue-400 break-all transition-all">oldlooktrade@naver.com</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal p-12 md:p-16 bg-slate-50 rounded-[3rem] border border-slate-200 shadow-xl">
                     <h4 class="text-3xl font-display font-black mb-16 uppercase tracking-tighter text-slate-900">
-                        <span data-lang="en">Inquiry</span><span data-lang="ko">견적 요청</span><span data-lang="es">Consulta</span>
+                        <span data-lang="en">Order Inquiry</span><span data-lang="ko">수출 견적 요청</span><span data-lang="es">Consulta de Pedido</span>
                     </h4>
-                    <form class="space-y-12" onsubmit="event.preventDefault(); alert('Protocol Transmitted.');">
+                    
+                    <!-- Netlify Form 적용: 데이터가 실제 이메일로 전달되도록 구조 변경 -->
+                    <form name="contact" method="POST" data-netlify="true" class="space-y-10">
+                        <!-- Netlify 연동을 위한 히든 필드 -->
+                        <input type="hidden" name="form-name" value="contact" />
+                        
                         <div class="grid md:grid-cols-2 gap-10">
                             <div class="space-y-4">
                                 <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Region</span><span data-lang="ko">도착 지역</span><span data-lang="es">Región</span></label>
-                                <select id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
+                                <select name="region" id="input-region" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
                             </div>
                             <div class="space-y-4">
                                 <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Volume</span><span data-lang="ko">필요 수량</span><span data-lang="es">Volumen</span></label>
-                                <select id="input-volume" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
+                                <select name="volume" id="input-volume" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold appearance-none transition"></select>
                             </div>
                         </div>
                         <div class="space-y-4">
-                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Email</span><span data-lang="ko">이메일</span><span data-lang="es">Email</span></label>
-                            <input id="input-email" type="email" class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold">
+                            <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Business Email</span><span data-lang="ko">비즈니스 이메일</span><span data-lang="es">Email</span></label>
+                            <input name="email" id="input-email" type="email" required class="w-full bg-transparent border-b-2 border-slate-200 py-4 outline-none focus:border-blue-600 text-sm font-bold">
                         </div>
                         <div class="space-y-4">
                             <label class="text-[11px] uppercase font-black text-slate-400 tracking-widest"><span data-lang="en">Requirements</span><span data-lang="ko">상세 요청사항</span><span data-lang="es">Requerimientos</span></label>
-                            <textarea id="input-req" rows="4" class="w-full bg-white/50 border-2 border-slate-100 rounded-2xl p-6 outline-none focus:border-blue-600 text-sm font-bold resize-none"></textarea>
+                            <textarea name="message" id="input-req" rows="4" class="w-full bg-white/50 border-2 border-slate-100 rounded-2xl p-6 outline-none focus:border-blue-600 text-sm font-bold resize-none transition-all"></textarea>
                         </div>
-                        <button class="w-full py-7 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] hover:bg-blue-700 rounded-2xl">
+                        <button type="submit" class="w-full py-7 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] hover:bg-blue-700 rounded-2xl shadow-xl transition-all">
                             <span data-lang="en">Submit Protocol</span><span data-lang="ko">문의 접수하기</span><span data-lang="es">Enviar Protocolo</span>
                         </button>
                     </form>
@@ -365,9 +368,9 @@
         </section>
     </main>
 
-    <!-- [FOOTER] -->
+    <!-- [FOOTER] SEO Optimization -->
     <footer class="py-24 bg-white text-center border-t border-slate-100">
-        <div class="container mx-auto px-6">
+        <div class="container mx-auto px-6 text-center">
             <p class="font-serif font-bold text-slate-900 text-5xl mb-6 tracking-tighter uppercase">OLDLOOK CORPORATION</p>
             <p class="text-[11px] uppercase tracking-[0.4em] text-slate-400 font-black">
                 <span data-lang="en">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</span>
@@ -418,10 +421,11 @@
 
         function updateDynamicText(lang) {
             const data = dictionary[lang];
-            document.getElementById('input-region').innerHTML = data.regions.map(r => `<option>${r}</option>`).join('');
-            document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option>${v}</option>`).join('');
+            document.getElementById('input-region').innerHTML = data.regions.map(r => `<option value="${r}">${r}</option>`).join('');
+            document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option value="${v}">${v}</option>`).join('');
             document.getElementById('input-email').placeholder = data.emailPlace;
             document.getElementById('input-req').placeholder = data.reqPlace;
+            // Update Addresses
             document.getElementById('addr-01').textContent = data.addr01;
             document.getElementById('addr-02').textContent = data.addr02;
         }
