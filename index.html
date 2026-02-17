@@ -270,14 +270,14 @@
                 <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase text-slate-900 mb-16 reveal text-center md:text-left">Signature Inventory</h2>
                 
                 <div class="flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12">
-                    <!-- Row 1: Items 1, 2, 3 (Mobile Scroll) -->
+                    <!-- Row 1 -->
                     <div class="flex md:contents overflow-x-auto no-scrollbar gap-4 snap-x snap-mandatory px-2">
                         <div class="cat-card reveal snap-center"><img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600" loading="lazy" decoding="async"><div class="cat-overlay"><h5>Summer Wear</h5></div></div>
                         <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/parka.jpg" loading="lazy" decoding="async"><div class="cat-overlay"><h5>Winter Premium</h5></div></div>
                         <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/dress.png" loading="lazy" decoding="async"><div class="cat-overlay"><h5>Women Dresses</h5></div></div>
                     </div>
                     
-                    <!-- Row 2: Items 4, 5, 6 (Mobile Scroll) -->
+                    <!-- Row 2 -->
                     <div class="flex md:contents overflow-x-auto no-scrollbar gap-4 snap-x snap-mandatory px-2">
                         <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_lvxh38lvxh38lvxh.png" loading="lazy" decoding="async"><div class="cat-overlay"><h5>Kids Summer</h5></div></div>
                         <div class="cat-card reveal snap-center"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600" loading="lazy" decoding="async"><div class="cat-overlay"><h5>Winter Knit</h5></div></div>
@@ -293,40 +293,49 @@
             <div class="container mx-auto grid lg:grid-cols-2 gap-20">
                 <div class="reveal text-left">
                     <h3 class="text-5xl font-serif font-bold mb-12 uppercase tracking-tighter text-slate-900">Logistics Center</h3>
-                    <div class="space-y-8">
+                    <div class="space-y-12 text-slate-600">
+                        <!-- Warehouse 01 -->
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest">Warehouse 01</h5>
-                            <p class="text-2xl font-bold mb-1 text-slate-900">Paju Center One</p>
-                            <p class="font-medium text-slate-500">Gyeonggi-do, Paju-si, Jeonjimimal-gil 164</p>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">Warehouse 01</h5>
+                            <p class="text-2xl font-bold mb-1 text-slate-900 text-left">Paju Center One</p>
+                            <!-- [DYNAMIC ADDRESS 01] -->
+                            <p class="font-medium text-slate-500 text-left" id="addr-01"></p>
+                        </div>
+                        <!-- Warehouse 02 -->
+                        <div>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">Warehouse 02</h5>
+                            <p class="text-2xl font-bold mb-1 text-slate-900 text-left">Gyoha Hub</p>
+                            <!-- [DYNAMIC ADDRESS 02] -->
+                            <p class="font-medium text-slate-500 text-left" id="addr-02"></p>
                         </div>
                         <div class="p-10 bg-slate-900 text-white rounded-3xl border-l-8 border-blue-600">
-                            <p class="text-[11px] font-black uppercase opacity-40 mb-4">Official Inquiry</p>
+                            <p class="text-[11px] font-black uppercase opacity-40 mb-4 text-left">Official Inquiry</p>
                             <a href="mailto:oldlooktrade@naver.com" class="text-xl md:text-2xl font-serif font-bold underline break-all">oldlooktrade@naver.com</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="reveal p-8 md:p-12 bg-slate-50 rounded-[3rem] border border-slate-200 shadow-xl">
+                <div class="reveal p-8 md:p-12 bg-slate-50 rounded-[2rem] border border-slate-200 shadow-xl">
                     <h4 class="text-2xl font-display font-black mb-10 uppercase tracking-tighter text-slate-900 text-center">Order Inquiry</h4>
                     <form name="contact" method="POST" data-netlify="true" action="/?success=true" class="space-y-6">
                         <input type="hidden" name="form-name" value="contact" />
-                        <div class="grid md:grid-cols-2 gap-6">
+                        <div class="grid md:grid-cols-2 gap-6 text-left">
                             <div class="space-y-2">
                                 <label class="text-[10px] uppercase font-black text-slate-400">Region</label>
-                                <select name="destination" id="input-region" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold"></select>
+                                <select name="destination" id="input-region" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-[10px] uppercase font-black text-slate-400">Volume</label>
-                                <select name="volume" id="input-volume" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold"></select>
+                                <select name="volume" id="input-volume" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
                             </div>
                         </div>
-                        <div class="space-y-2">
+                        <div class="space-y-2 text-left">
                             <label class="text-[10px] uppercase font-black text-slate-400">Business Email</label>
                             <input name="email" id="input-email" type="email" required class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold">
                         </div>
-                        <div class="space-y-2">
+                        <div class="space-y-2 text-left">
                             <label class="text-[10px] uppercase font-black text-slate-400">Message</label>
-                            <textarea name="message" id="input-req" rows="3" class="w-full bg-white/50 border border-slate-200 rounded-xl p-4 outline-none focus:border-blue-600 text-sm font-bold"></textarea>
+                            <textarea name="message" id="input-req" rows="3" class="w-full bg-white/50 border border-slate-200 rounded-xl p-4 outline-none focus:border-blue-600 text-sm font-bold resize-none"></textarea>
                         </div>
                         <button type="submit" class="w-full py-5 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] rounded-xl shadow-xl hover:bg-blue-700 transition-all">Submit Inquiry</button>
                     </form>
@@ -340,15 +349,36 @@
             <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Logo" class="w-full h-full object-contain">
         </div>
         <p class="font-serif font-bold text-slate-900 text-3xl md:text-5xl mb-4 tracking-tighter uppercase">OLDLOOK CORPORATION</p>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-black px-6">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-black px-6 text-center">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</p>
     </footer>
 
     <script>
         lucide.createIcons();
         const dictionary = {
-            ko: { regions: ['도착 지역 선택', '아프리카', '아메리카', '아시아 퍼시픽'], volumes: ['컨테이너 크기', '20피트 Standard', '40피트 High Cube', '샘플 주문'], emailPlace: '이메일 주소를 입력하세요', reqPlace: '품목이나 등급 등 상세 내용을 적어주세요.' },
-            en: { regions: ['Select Destination', 'Africa', 'Americas', 'Asia Pacific'], volumes: ['Container Size', '20ft Standard', '40ft High Cube', 'Sample Trial'], emailPlace: 'Enter business email', reqPlace: 'Items, grades or special requirements...' },
-            es: { regions: ['Seleccionar Región', 'África', 'América', 'Asia Pacífico'], volumes: ['Tamaño del Contenedor', '20 pies Standard', '40 pies High Cube', 'Pedido de Muestra'], emailPlace: 'Ingrese su correo electrónico', reqPlace: 'Detalles como artículos, grados...' }
+            ko: { 
+                regions: ['도착 지역 선택', '아프리카', '아메리카', '아시아 퍼시픽'], 
+                volumes: ['컨테이너 크기', '20피트 Standard', '40피트 High Cube', '샘플 주문'], 
+                emailPlace: '이메일 주소를 입력하세요', 
+                reqPlace: '품목이나 등급 등 상세 내용을 적어주세요.',
+                addr01: '경기도 파주시 조리읍 전지미말길 164',
+                addr02: '경기도 파주시 교하동 빙고재길 48-20, 48-22'
+            },
+            en: { 
+                regions: ['Select Destination', 'Africa', 'Americas', 'Asia Pacific'], 
+                volumes: ['Container Size', '20ft Standard', '40ft High Cube', 'Sample Trial'], 
+                emailPlace: 'Enter business email', 
+                reqPlace: 'Items, grades or special requirements...',
+                addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Korea',
+                addr02: '48-20, 48-22, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Korea'
+            },
+            es: { 
+                regions: ['Seleccionar Región', 'África', 'América', 'Asia Pacífico'], 
+                volumes: ['Tamaño del Contenedor', '20 pies Standard', '40 pies High Cube', 'Pedido de Muestra'], 
+                emailPlace: 'Ingrese su correo electrónico', 
+                reqPlace: 'Detalles como artículos, grados...',
+                addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Korea',
+                addr02: '48-20, 48-22, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Korea'
+            }
         };
 
         function setLang(lang) {
@@ -366,6 +396,9 @@
             document.getElementById('input-volume').innerHTML = data.volumes.map(v => `<option value="${v}">${v}</option>`).join('');
             document.getElementById('input-email').placeholder = data.emailPlace;
             document.getElementById('input-req').placeholder = data.reqPlace;
+            // [MODIFIED] 주소 업데이트 로직
+            document.getElementById('addr-01').textContent = data.addr01;
+            document.getElementById('addr-02').textContent = data.addr02;
         }
 
         function reveal() {
@@ -384,14 +417,14 @@
             const langContainer = document.getElementById('lang-container');
             const logoSubs = document.querySelectorAll('.logo-sub');
             const langBtns = document.querySelectorAll('.lang-btn:not(.active)');
-            const navLinks = document.querySelectorAll('.nav-link'); // FIXED: navLinks 변수 선언 추가
+            const navLinks = document.querySelectorAll('.nav-link');
 
             if (window.scrollY > 50) {
                 nav.classList.add('nav-scrolled', 'py-4');
                 logoBox.style.backgroundColor = '#FFFFFF'; 
                 logoText.style.color = '#0F172A';
                 logoSubs.forEach(el => el.style.color = '#64748b');
-                navLinks.forEach(el => el.style.color = '#475569'); // 오류 해결 포인트
+                navLinks.forEach(el => el.style.color = '#475569');
                 langBtns.forEach(btn => btn.style.color = '#0F172A');
                 if (window.innerWidth < 768) {
                     langContainer.style.maxHeight = '0';
@@ -403,7 +436,7 @@
                 logoBox.style.backgroundColor = '#FFFFFF';
                 logoText.style.color = '#FFFFFF';
                 logoSubs.forEach(el => el.style.color = 'rgba(255,255,255,0.5)');
-                navLinks.forEach(el => el.style.color = '#FFFFFF'); // 오류 해결 포인트
+                navLinks.forEach(el => el.style.color = '#FFFFFF');
                 langBtns.forEach(btn => btn.style.color = '#FFFFFF');
                 if (window.innerWidth < 768) {
                     langContainer.style.maxHeight = '100px';
