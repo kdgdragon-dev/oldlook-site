@@ -1,13 +1,16 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    
+
     <!-- [SEO] 구글 및 AI 검색 최적화 - 'korea used clothing' 키워드 최적화 -->
     <title>OLDLOOK CORPORATION | Premium Korea Used Clothing Export Leader</title>
-    <meta name="description" content="OLDLOOK CORPORATION is the global leader in Korea used clothing export. Premium sorted textiles from Seoul's top residential zones. Master quality control and worldwide shipping.">
-    <meta name="keywords" content="Korea used clothing, used clothing export Korea, second hand clothes wholesale, premium used clothing, OLDLOOK CORPORATION, 헌옷수출">
+    <meta name="description"
+        content="OLDLOOK CORPORATION is the global leader in Korea used clothing export. Premium sorted textiles from Seoul's top residential zones. Master quality control and worldwide shipping.">
+    <meta name="keywords"
+        content="Korea used clothing, used clothing export Korea, second hand clothes wholesale, premium used clothing, OLDLOOK CORPORATION, 헌옷수출">
     <meta name="author" content="OLDLOOK CORPORATION">
     <link rel="canonical" href="https://koreausedclothing.com/">
 
@@ -33,7 +36,9 @@
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/lucide@latest"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@200;400;700;900&family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@200;400;700;900&family=Noto+Sans+KR:wght@100;400;700&display=swap"
+        rel="stylesheet">
 
     <style>
         :root {
@@ -43,7 +48,8 @@
             --text-dark: #0f172a;
         }
 
-        html, body {
+        html,
+        body {
             max-width: 100%;
             overflow-x: hidden;
             width: 100%;
@@ -58,28 +64,74 @@
             color: var(--text-dark);
         }
 
-        .font-serif { font-family: 'Cinzel', serif; }
+        .font-serif {
+            font-family: 'Cinzel', serif;
+        }
 
         /* 다국어 표시 시스템 */
-        [data-lang] { display: none; }
-        body.lang-en [data-lang="en"], body.lang-ko [data-lang="ko"], body.lang-es [data-lang="es"] { display: inline; }
-        body.lang-en div[data-lang="en"], body.lang-en p[data-lang="en"], body.lang-en h1[data-lang="en"], body.lang-en h2[data-lang="en"], body.lang-en h3[data-lang="en"], body.lang-en h4[data-lang="en"] { display: block; }
-        body.lang-ko div[data-lang="ko"], body.lang-ko p[data-lang="ko"], body.lang-ko h1[data-lang="ko"], body.lang-ko h2[data-lang="ko"], body.lang-ko h3[data-lang="ko"], body.lang-ko h4[data-lang="ko"] { display: block; }
-        body.lang-es div[data-lang="es"], body.lang-es p[data-lang="es"], body.lang-es h1[data-lang="es"], body.lang-es h2[data-lang="es"], body.lang-es h3[data-lang="es"], body.lang-es h4[data-lang="es"] { display: block; }
+        [data-lang] {
+            display: none;
+        }
+
+        body.lang-en [data-lang="en"],
+        body.lang-ko [data-lang="ko"],
+        body.lang-es [data-lang="es"] {
+            display: inline;
+        }
+
+        body.lang-en div[data-lang="en"],
+        body.lang-en p[data-lang="en"],
+        body.lang-en h1[data-lang="en"],
+        body.lang-en h2[data-lang="en"],
+        body.lang-en h3[data-lang="en"],
+        body.lang-en h4[data-lang="en"] {
+            display: block;
+        }
+
+        body.lang-ko div[data-lang="ko"],
+        body.lang-ko p[data-lang="ko"],
+        body.lang-ko h1[data-lang="ko"],
+        body.lang-ko h2[data-lang="ko"],
+        body.lang-ko h3[data-lang="ko"],
+        body.lang-ko h4[data-lang="ko"] {
+            display: block;
+        }
+
+        body.lang-es div[data-lang="es"],
+        body.lang-es p[data-lang="es"],
+        body.lang-es h1[data-lang="es"],
+        body.lang-es h2[data-lang="es"],
+        body.lang-es h3[data-lang="es"],
+        body.lang-es h4[data-lang="es"] {
+            display: block;
+        }
 
         /* 네비게이션 애니메이션 */
-        #navbar { transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); width: 100%; }
-        .nav-scrolled { background: rgba(255, 255, 255, 0.98); box-shadow: 0 10px 50px rgba(0,0,0,0.1); border-bottom: 1px solid #f1f5f9; }
-        
+        #navbar {
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            width: 100%;
+        }
+
+        .nav-scrolled {
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 10px 50px rgba(0, 0, 0, 0.1);
+            border-bottom: 1px solid #f1f5f9;
+        }
+
         /* 언어 버튼 */
         .lang-btn {
-            width: 60px; height: 44px;
-            display: flex; align-items: center; justify-content: center;
-            font-weight: 900; font-size: 12px;
+            width: 60px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 900;
+            font-size: 12px;
             transition: all 0.3s ease;
-            border: 2px solid rgba(255,255,255,0.2);
+            border: 2px solid rgba(255, 255, 255, 0.2);
             border-radius: 6px;
         }
+
         .lang-btn.active {
             background: var(--brand-white);
             color: black !important;
@@ -106,18 +158,32 @@
             overflow: hidden;
             border-radius: 12px;
             height: 380px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
             transition: all 0.5s ease;
             background: #fff;
             flex-shrink: 0;
             width: 280px;
             cursor: pointer;
         }
+
         @media (min-width: 768px) {
-            .cat-card { width: auto; height: 480px; }
+            .cat-card {
+                width: auto;
+                height: 480px;
+            }
         }
-        .cat-card img { transition: transform 1.2s ease; width: 100%; height: 100%; object-fit: cover; }
-        .cat-card:hover img { transform: scale(1.1); }
+
+        .cat-card img {
+            transition: transform 1.2s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .cat-card:hover img {
+            transform: scale(1.1);
+        }
+
         .cat-overlay {
             background: linear-gradient(transparent, rgba(15, 23, 42, 0.95));
             position: absolute;
@@ -129,8 +195,14 @@
             color: white;
         }
 
-        .no-scrollbar::-webkit-scrollbar { display: none; }
-        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
 
         .process-card {
             background-color: white !important;
@@ -138,44 +210,79 @@
             cursor: pointer;
             border: 1px solid #f1f5f9;
         }
+
         .process-card:hover {
             background-color: var(--brand-navy) !important;
             transform: translateY(-10px);
             box-shadow: 0 20px 40px rgba(15, 23, 42, 0.3);
         }
-        .process-card:hover * { color: white !important; }
 
-        .reveal { opacity: 0; transform: translateY(30px); transition: all 1s cubic-bezier(0.22, 1, 0.36, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-        .text-glow { text-shadow: 0 4px 30px rgba(0,0,0,0.5); }
+        .process-card:hover * {
+            color: white !important;
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 1s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .text-glow {
+            text-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        #video-modal {
+            z-index: 9999 !important;
+        }
+
+        .cat-card {
+            z-index: 10;
+        }
     </style>
 </head>
+
 <body class="lang-ko">
 
     <!-- [NAV] Navigation -->
-    <nav id="navbar" class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
+    <nav id="navbar"
+        class="fixed w-full z-[100] py-6 px-6 md:px-12 flex flex-col md:flex-row justify-between items-start md:items-center transition-all duration-500">
         <div class="flex items-center gap-4 text-left">
             <!-- 로고 박스 상시 하얀색 고정 -->
-            <div id="logo-box" class="w-12 h-12 md:w-16 md:h-16 bg-white flex items-center justify-center shadow-xl rounded-full overflow-hidden border-2 border-slate-100 transition-all duration-300">
-                <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Logo" class="w-full h-full object-contain">
+            <div id="logo-box"
+                class="w-12 h-12 md:w-16 md:h-16 bg-white flex items-center justify-center shadow-xl rounded-full overflow-hidden border-2 border-slate-100 transition-all duration-300">
+                <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png"
+                    alt="OLDLOOK Logo" class="w-full h-full object-contain">
             </div>
             <div class="flex flex-col">
-                <span id="logo-text" class="text-white font-bold text-base md:text-lg tracking-tight transition-colors font-serif uppercase">OLDLOOK</span>
+                <span id="logo-text"
+                    class="text-white font-bold text-base md:text-lg tracking-tight transition-colors font-serif uppercase">OLDLOOK</span>
                 <div id="logo-subs-container">
-                   <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="en">Korea Used Clothing Expert</span>
-                   <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="ko">글로벌 헌옷 무역</span>
-                   <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="es">Exportación de Ropa Usada</span>
+                    <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="en">Korea Used
+                        Clothing Expert</span>
+                    <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]" data-lang="ko">글로벌 헌옷
+                        무역</span>
+                    <span class="logo-sub text-white/50 text-[9px] uppercase tracking-[0.3em]"
+                        data-lang="es">Exportación de Ropa Usada</span>
                 </div>
             </div>
         </div>
 
         <div class="flex items-center gap-4 md:gap-10 w-full md:w-auto mt-4 md:mt-0">
             <div class="hidden lg:flex items-center gap-10 text-white" id="nav-links">
-                <a href="#process" class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">PROCESS</a>
-                <a href="#collection" class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">COLLECTION</a>
-                <a href="#contact" class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">INQUIRY</a>
+                <a href="#process"
+                    class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">PROCESS</a>
+                <a href="#collection"
+                    class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">COLLECTION</a>
+                <a href="#contact"
+                    class="nav-link text-[11px] font-extrabold uppercase tracking-widest hover:opacity-50">INQUIRY</a>
             </div>
-            <div id="lang-container" class="flex gap-2 bg-black/10 p-1.5 rounded-xl border border-white/10 backdrop-blur-md transition-all duration-500 overflow-hidden">
+            <div id="lang-container"
+                class="flex gap-2 bg-black/10 p-1.5 rounded-xl border border-white/10 backdrop-blur-md transition-all duration-500 overflow-hidden">
                 <button onclick="setLang('ko')" id="l-ko" class="lang-btn text-white font-bold">KR</button>
                 <button onclick="setLang('en')" id="l-en" class="lang-btn text-white font-bold">EN</button>
                 <button onclick="setLang('es')" id="l-es" class="lang-btn text-white font-bold">ES</button>
@@ -186,14 +293,20 @@
     <!-- [HERO] Hero Section -->
     <header class="hero-vessel">
         <div class="container mx-auto px-6 relative z-10 text-center">
-            <h2 class="text-[10px] md:text-sm font-black tracking-[1em] uppercase mb-8 reveal text-white text-glow">Korea Used Clothing Wholesale & Export</h2>
-            <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.1] tracking-tighter mb-12 reveal text-white text-glow mx-auto w-full max-w-5xl">
-                OLDLOOK<br><span class="italic opacity-50 block mt-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">CORPORATION</span>
+            <h2 class="text-[10px] md:text-sm font-black tracking-[1em] uppercase mb-8 reveal text-white text-glow">
+                Korea Used Clothing Wholesale & Export</h2>
+            <h1
+                class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-serif font-bold leading-[1.1] tracking-tighter mb-12 reveal text-white text-glow mx-auto w-full max-w-5xl">
+                OLDLOOK<br><span
+                    class="italic opacity-50 block mt-2 text-3xl sm:text-5xl md:text-6xl lg:text-7xl">CORPORATION</span>
             </h1>
-            <p class="text-base md:text-xl font-light text-white/90 mb-12 reveal max-w-2xl leading-relaxed mx-auto text-center px-4">
-                <span data-lang="en">Premium curation of Korean fashion textiles. Verified through strict manual inspection for global bulk supply.</span>
+            <p
+                class="text-base md:text-xl font-light text-white/90 mb-12 reveal max-w-2xl leading-relaxed mx-auto text-center px-4">
+                <span data-lang="en">Premium curation of Korean fashion textiles. Verified through strict manual
+                    inspection for global bulk supply.</span>
                 <span data-lang="ko">한국 패션의 가치를 선별하는 마스터 큐레이션. 정밀 검수를 거친 최상급 헌옷만을 전 세계로 수출합니다.</span>
-                <span data-lang="es">Curaduría maestra de textiles de moda coreanos. Verificado mediante inspección manual para suministro global.</span>
+                <span data-lang="es">Curaduría maestra de textiles de moda coreanos. Verificado mediante inspección
+                    manual para suministro global.</span>
             </p>
         </div>
     </header>
@@ -202,53 +315,69 @@
         <!-- [PROCESS] Master Protocol -->
         <section id="process" class="py-24 px-6 overflow-hidden text-center text-slate-900">
             <div class="max-w-4xl mx-auto mb-16 reveal">
-                <h3 class="text-[10px] font-black tracking-[0.6em] text-blue-600 uppercase mb-4 text-center">Quality Standards</h3>
-                <h2 class="text-3xl md:text-7xl font-serif font-bold leading-tight text-slate-900 uppercase text-center">Master Protocol</h2>
+                <h3 class="text-[10px] font-black tracking-[0.6em] text-blue-600 uppercase mb-4 text-center">Quality
+                    Standards</h3>
+                <h2
+                    class="text-3xl md:text-7xl font-serif font-bold leading-tight text-slate-900 uppercase text-center">
+                    Master Protocol</h2>
                 <div class="w-20 h-1.5 bg-blue-600 mx-auto mt-10 rounded-full"></div>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 container mx-auto">
-                <div class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
+                <div
+                    class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
                     <i data-lucide="map-pin" class="mb-10 w-10 h-10 text-blue-600"></i>
                     <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">01. Elite Sourcing</span><span data-lang="ko">01. 엘리트 수거</span><span data-lang="es">01. Sourcing Elite</span>
+                        <span data-lang="en">01. Elite Sourcing</span><span data-lang="ko">01. 엘리트 수거</span><span
+                            data-lang="es">01. Sourcing Elite</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed text-left">
                         <span data-lang="ko">서울의 주요 고소득 주거 단지에서만 원물을 확보하여 기초 품질을 보장합니다.</span>
-                        <span data-lang="en">Sourced from Seoul's prime residential zones, ensuring high brand density.</span>
+                        <span data-lang="en">Sourced from Seoul's prime residential zones, ensuring high brand
+                            density.</span>
                         <span data-lang="es">Obtenemos de zonas residenciales de altos ingresos de Seúl.</span>
                     </p>
                 </div>
-                <div class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
+                <div
+                    class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
                     <i data-lucide="layers-3" class="mb-10 w-10 h-10 text-blue-600"></i>
                     <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">02. 3-Stage Audit</span><span data-lang="ko">02. 3단계 마스터 검수</span><span data-lang="es">02. Auditoría Maestra</span>
+                        <span data-lang="en">02. 3-Stage Audit</span><span data-lang="ko">02. 3단계 마스터 검수</span><span
+                            data-lang="es">02. Auditoría Maestra</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed text-left">
                         <span data-lang="ko">1차 오염물 제거, 2차 세부 분류, 3차 마스터 판정으로 무결점 상품을 선별합니다.</span>
-                        <span data-lang="en">3-tier manual inspection by specialists to select only premium items.</span>
+                        <span data-lang="en">3-tier manual inspection by specialists to select only premium
+                            items.</span>
                         <span data-lang="es">Inspección manual de 3 etapas para seleccionar artículos premium.</span>
                     </p>
                 </div>
-                <div class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
+                <div
+                    class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
                     <i data-lucide="package" class="mb-10 w-10 h-10 text-blue-600"></i>
                     <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">03. Gentle Baling</span><span data-lang="ko">03. 정밀 압축 포장</span><span data-lang="es">03. Empacado Suave</span>
+                        <span data-lang="en">03. Gentle Baling</span><span data-lang="ko">03. 정밀 압축 포장</span><span
+                            data-lang="es">03. Empacado Suave</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed text-left">
                         <span data-lang="ko">의류 섬유의 손상을 최소화하는 유압 기술로 상품성을 보존하며 압축 포장합니다.</span>
-                        <span data-lang="en">Hydraulic compression maintains fabric integrity while maximizing efficiency.</span>
-                        <span data-lang="es">La compresión hidráulica de última generación mantiene la integridad.</span>
+                        <span data-lang="en">Hydraulic compression maintains fabric integrity while maximizing
+                            efficiency.</span>
+                        <span data-lang="es">La compresión hidráulica de última generación mantiene la
+                            integridad.</span>
                     </p>
                 </div>
-                <div class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
+                <div
+                    class="p-12 border border-slate-100 rounded-2xl reveal shadow-sm transition-all group text-left bg-white">
                     <i data-lucide="ship" class="mb-10 w-10 h-10 text-blue-600"></i>
                     <h4 class="font-black uppercase tracking-widest text-xs mb-4">
-                        <span data-lang="en">04. Global Loading</span><span data-lang="ko">04. 글로벌 선적</span><span data-lang="es">04. Envío Global</span>
+                        <span data-lang="en">04. Global Loading</span><span data-lang="ko">04. 글로벌 선적</span><span
+                            data-lang="es">04. Envío Global</span>
                     </h4>
                     <p class="text-slate-500 text-sm leading-relaxed text-left">
                         <span data-lang="ko">최적화된 물류 시스템을 통해 엄선된 컨테이너를 전 세계 주요 항구로 선적합니다.</span>
-                        <span data-lang="en">Seamless logistics delivering containers to major international ports.</span>
+                        <span data-lang="en">Seamless logistics delivering containers to major international
+                            ports.</span>
                         <span data-lang="es">Logística global fluida a los principales puertos mundiales.</span>
                     </p>
                 </div>
@@ -258,28 +387,64 @@
         <!-- [COLLECTION] Inventory - Optimized Mobile Scroll (2 Rows) -->
         <section id="collection" class="py-24 bg-slate-50 px-6 overflow-hidden">
             <div class="container mx-auto">
-                <h2 class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase text-slate-900 mb-16 reveal text-center md:text-left">Signature Inventory</h2>
-                
+                <h2
+                    class="text-5xl md:text-8xl font-serif font-bold tracking-tighter uppercase text-slate-900 mb-16 reveal text-center md:text-left">
+                    Signature Inventory</h2>
+
                 <div class="flex flex-col gap-6 md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-12">
                     <!-- Row 1: 가로 스크롤 -->
                     <div class="flex md:contents overflow-x-auto no-scrollbar gap-4 snap-x snap-mandatory px-2">
                         <!-- Men Round T: 유튜브 모달 실행 -->
-                        <div class="cat-card reveal snap-center" onclick="openVideoModal()">
-                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600" loading="lazy">
-                            <div class="cat-overlay"><h5>Men Round T</h5></div>
+                        <div class="cat-card reveal snap-center" onclick="openVideoModal('3QVppPELw1A')">
+                            <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?auto=format&fit=crop&w=600"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Men Round T</h5>
+                            </div>
                         </div>
-                        <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/parka.jpg" loading="lazy"><div class="cat-overlay"><h5>Winter Premium</h5></div></div>
-                        <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/dress.png" loading="lazy"><div class="cat-overlay"><h5>Women Dresses</h5></div></div>
+                        <div class="cat-card reveal snap-center"><img
+                                src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/parka.jpg"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Winter Premium</h5>
+                            </div>
+                        </div>
+                        <div class="cat-card reveal snap-center" onclick="openVideoModal('HUWPmws0XKc', true)">
+                            <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/dress.png"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Women Dresses</h5>
+                            </div>
+                        </div>
                     </div>
-                    
+
                     <!-- Row 2: 가로 스크롤 -->
                     <div class="flex md:contents overflow-x-auto no-scrollbar gap-4 snap-x snap-mandatory px-2">
-                        <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_lvxh38lvxh38lvxh.png" loading="lazy"><div class="cat-overlay"><h5>Kids Summer</h5></div></div>
-                        <div class="cat-card reveal snap-center"><img src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600" loading="lazy"><div class="cat-overlay"><h5>Winter Knit</h5></div></div>
-                        <div class="cat-card reveal snap-center"><img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/toys.jpg" loading="lazy"><div class="cat-overlay"><h5>Dolls & Toys</h5></div></div>
+                        <div class="cat-card reveal snap-center" onclick="openVideoModal('LY_DVL3HI4c', true)">
+                            <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/Gemini_Generated_Image_lvxh38lvxh38lvxh.png"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Kids Summer</h5>
+                            </div>
+                        </div>
+                        <div class="cat-card reveal snap-center"><img
+                                src="https://images.unsplash.com/photo-1434389677669-e08b4cac3105?auto=format&fit=crop&w=600"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Winter Knit</h5>
+                            </div>
+                        </div>
+                        <div class="cat-card reveal snap-center"><img
+                                src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/toys.jpg"
+                                loading="lazy">
+                            <div class="cat-overlay">
+                                <h5>Dolls & Toys</h5>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p class="md:hidden text-center text-slate-400 text-[10px] mt-6 tracking-widest uppercase">← Swipe to explore →</p>
+                <p class="md:hidden text-center text-slate-400 text-[10px] mt-6 tracking-widest uppercase">← Swipe to
+                    explore →</p>
             </div>
         </section>
 
@@ -287,69 +452,109 @@
         <section id="contact" class="py-24 px-6 bg-white border-t border-slate-100 text-slate-900">
             <div class="container mx-auto grid lg:grid-cols-2 gap-20">
                 <div class="reveal text-left">
-                    <h3 class="text-5xl font-serif font-bold mb-12 uppercase tracking-tighter text-slate-900 text-left">Logistics Center</h3>
+                    <h3 class="text-5xl font-serif font-bold mb-12 uppercase tracking-tighter text-slate-900 text-left">
+                        Logistics Center</h3>
                     <div class="space-y-12 text-slate-600">
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">Warehouse 01</h5>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">
+                                Warehouse 01</h5>
                             <p class="text-2xl font-bold mb-1 text-slate-900 text-left font-serif">Paju Center One</p>
                             <p class="font-medium text-slate-500 text-left" id="addr-01"></p>
                         </div>
                         <div>
-                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">Warehouse 02</h5>
+                            <h5 class="text-blue-600 font-bold text-[11px] uppercase mb-2 tracking-widest text-left">
+                                Warehouse 02</h5>
                             <p class="text-2xl font-bold mb-1 text-slate-900 text-left font-serif">Gyoha Hub</p>
                             <p class="font-medium text-slate-500 text-left" id="addr-02"></p>
                         </div>
                         <div class="p-10 bg-slate-900 text-white rounded-3xl border-l-8 border-blue-600">
                             <p class="text-[11px] font-black uppercase opacity-40 mb-4 text-left">Official Inquiry</p>
-                            <a href="mailto:oldlooktrade@naver.com" class="text-xl md:text-2xl font-serif font-bold underline break-all hover:text-blue-400">oldlooktrade@naver.com</a>
+                            <a href="mailto:oldlooktrade@naver.com"
+                                class="text-xl md:text-2xl font-serif font-bold underline break-all hover:text-blue-400">oldlooktrade@naver.com</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="reveal p-8 md:p-12 bg-slate-50 rounded-[3rem] border border-slate-200 shadow-xl">
-                    <h4 class="text-2xl font-display font-black mb-10 uppercase tracking-tighter text-slate-900 text-center">Order Inquiry</h4>
-                    <form name="contact" method="POST" data-netlify="true" action="/?success=true" class="space-y-6">
-                        <input type="hidden" name="form-name" value="contact" />
+                    <h4
+                        class="text-2xl font-display font-black mb-10 uppercase tracking-tighter text-slate-900 text-center">
+                        Order Inquiry</h4>
+                    <!-- FormSubmit.co 를 사용하여 실제 메일 발송 기능 추가 -->
+                    <form id="contact-form" action="https://formsubmit.co/oldlooktrade@naver.com" method="POST"
+                        class="space-y-6">
+                        <!-- 설정 테그들 -->
+                        <input type="hidden" name="_subject" value="[OLDLOOK WEBSITE] New Inquiry Received!">
+                        <input type="hidden" name="_next" value="http://localhost:8080/?success=true">
+                        <input type="hidden" name="_template" value="table">
+                        <input type="hidden" name="_captcha" value="false">
+
                         <div class="grid md:grid-cols-2 gap-6 text-left">
                             <div class="space-y-2">
                                 <label class="text-[10px] uppercase font-black text-slate-400">Region</label>
-                                <select name="destination" id="input-region" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
+                                <select name="Region" id="input-region"
+                                    class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-[10px] uppercase font-black text-slate-400">Volume</label>
-                                <select name="volume" id="input-volume" class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
+                                <select name="Volume" id="input-volume"
+                                    class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold appearance-none"></select>
                             </div>
                         </div>
                         <div class="space-y-2 text-left">
                             <label class="text-[10px] uppercase font-black text-slate-400">Business Email</label>
-                            <input name="email" id="input-email" type="email" required class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold">
+                            <input name="Email" id="input-email" type="email" required
+                                class="w-full bg-transparent border-b border-slate-300 py-3 outline-none focus:border-blue-600 text-sm font-bold">
                         </div>
                         <div class="space-y-2 text-left">
                             <label class="text-[10px] uppercase font-black text-slate-400">Message</label>
-                            <textarea name="message" id="input-req" rows="3" class="w-full bg-white/50 border border-slate-200 rounded-xl p-4 outline-none focus:border-blue-600 text-sm font-bold resize-none"></textarea>
+                            <textarea name="Message" id="input-req" rows="3"
+                                class="w-full bg-white/50 border border-slate-200 rounded-xl p-4 outline-none focus:border-blue-600 text-sm font-bold resize-none"></textarea>
                         </div>
-                        <button type="submit" class="w-full py-5 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] rounded-xl shadow-xl hover:bg-blue-700 transition-all">Submit Inquiry</button>
+                        <button type="submit"
+                            class="w-full py-5 bg-blue-600 text-white font-black uppercase text-[11px] tracking-[0.5em] rounded-xl shadow-xl hover:bg-blue-700 transition-all">Submit
+                            Inquiry</button>
                     </form>
+
+                    <!-- 성공 메시지창 (초기엔 숨김) -->
+                    <div id="success-msg"
+                        class="hidden flex flex-col items-center justify-center p-12 text-center space-y-4">
+                        <div
+                            class="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center">
+                            <i data-lucide="check-circle" class="w-10 h-10"></i>
+                        </div>
+                        <h4 class="text-xl font-bold">Successfully Sent!</h4>
+                        <p class="text-sm text-slate-500">
+                            <span data-lang="ko">문의가 정상적으로 전송되었습니다. 검토 후 연락드리겠습니다.</span>
+                            <span data-lang="en">Your inquiry has been sent. We will contact you soon.</span>
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
     </main>
 
     <footer class="py-16 bg-white text-center flex flex-col items-center border-t border-slate-100">
-        <div class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100 overflow-hidden">
-            <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png" alt="OLDLOOK Logo" class="w-full h-full object-contain">
+        <div
+            class="w-20 h-20 bg-white rounded-full flex items-center justify-center mb-6 shadow-sm border border-slate-100 overflow-hidden">
+            <img src="https://raw.githubusercontent.com/kdgdragon-dev/oldlook-site/main/%EC%A0%9C%EB%AA%A9%20%EC%97%86%EB%8A%94%20%EB%94%94%EC%9E%90%EC%9D%B8%20(1).png"
+                alt="OLDLOOK Logo" class="w-full h-full object-contain">
         </div>
-        <p class="font-serif font-bold text-slate-900 text-3xl md:text-5xl mb-4 tracking-tighter uppercase text-center">OLDLOOK CORPORATION</p>
-        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-black px-6 text-center">Global Authority in Korea Used Clothing | Reg No: 124-45-61361</p>
+        <p class="font-serif font-bold text-slate-900 text-3xl md:text-5xl mb-4 tracking-tighter uppercase text-center">
+            OLDLOOK CORPORATION</p>
+        <p class="text-[10px] uppercase tracking-[0.3em] text-slate-400 font-black px-6 text-center">Global Authority in
+            Korea Used Clothing | Reg No: 124-45-61361</p>
     </footer>
 
     <!-- 유튜브 비디오 플레이어 모달 (오류 153 방지 임베드 주소 적용) -->
     <div id="video-modal" class="fixed inset-0 bg-black/95 z-[200] hidden flex items-center justify-center p-4">
-        <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors z-[210]">
+        <button onclick="closeVideoModal()"
+            class="absolute top-6 right-6 text-white hover:text-blue-400 transition-colors z-[210]">
             <i data-lucide="x" class="w-10 h-10"></i>
         </button>
         <div class="w-full max-w-4xl aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl relative">
-            <iframe id="modal-iframe" class="w-full h-full" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="modal-iframe" class="w-full h-full" src="" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
         </div>
     </div>
 
@@ -361,12 +566,22 @@
             es: { regions: ['Seleccionar Región', 'África', 'América', 'Asia Pacífico'], volumes: ['Tamaño del Contenedor', '20 pies Standard', '40 pies High Cube', 'Pedido de Muestra'], emailPlace: 'Ingrese su correo electrónico', reqPlace: 'Detalles como artículos, grados...', addr01: '164, Jeonjimimal-gil, Jori-eup, Paju-si, Gyeonggi-do, Korea', addr02: '48-20, 48-22, Binggojae-gil, Gyoha-dong, Paju-si, Gyeonggi-do, Korea' }
         };
 
-        function openVideoModal() {
+        function openVideoModal(videoId, isShort = false) {
             const modal = document.getElementById('video-modal');
             const iframe = document.getElementById('modal-iframe');
-            // '오류 153'을 피하기 위해 공식 embed 주소만 사용합니다.
-            // https://www.youtube.com/embed/영상ID
-            iframe.src = "https://www.youtube.com/embed/3QVppPELw1A?autoplay=1&rel=0&modestbranding=1";
+            const container = iframe.parentElement;
+
+            // 세로형 영상(Shorts)인 경우 비율과 최대 너비 조절
+            if (isShort) {
+                container.classList.remove('aspect-video', 'max-w-4xl');
+                container.classList.add('aspect-[9/16]', 'h-[80vh]', 'max-w-sm');
+            } else {
+                container.classList.remove('aspect-[9/16]', 'h-[80vh]', 'max-w-sm');
+                container.classList.add('aspect-video', 'max-w-4xl');
+            }
+
+            const id = videoId || '3QVppPELw1A';
+            iframe.src = `https://www.youtube.com/embed/${id}?autoplay=1&rel=0&modestbranding=1`;
             modal.classList.remove('hidden');
             modal.classList.add('flex');
         }
@@ -383,7 +598,7 @@
             document.body.className = `lang-${lang}`;
             document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
             const activeBtn = document.getElementById(`l-${lang}`);
-            if(activeBtn) activeBtn.classList.add('active');
+            if (activeBtn) activeBtn.classList.add('active');
             updateDynamicText(lang);
             reveal();
         }
@@ -405,7 +620,13 @@
         }
 
         window.addEventListener('scroll', reveal);
-        window.onload = () => { setLang('ko'); reveal(); };
+        window.onload = () => {
+            setLang('ko');
+            reveal();
+            // 강제로 전역 스코프에 함수 연결 확인
+            window.openVideoModal = openVideoModal;
+            window.closeVideoModal = closeVideoModal;
+        };
 
         window.addEventListener('scroll', () => {
             const nav = document.getElementById('navbar');
@@ -418,7 +639,7 @@
 
             if (window.scrollY > 50) {
                 nav.classList.add('nav-scrolled', 'py-4');
-                logoBox.style.backgroundColor = '#FFFFFF'; 
+                logoBox.style.backgroundColor = '#FFFFFF';
                 logoText.style.color = '#0F172A';
                 logoSubs.forEach(el => el.style.color = '#64748b');
                 navLinks.forEach(el => el.style.color = '#475569');
@@ -446,4 +667,5 @@
         });
     </script>
 </body>
+
 </html>
